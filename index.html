@@ -1,31 +1,36 @@
-<!doctype html>
-<html>
-  <head>
-  </head>
-  <body>
-    <script>
-      var flat = 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+      function init()
       {
-        make:'Flat',
-        model:'500',
-        year:1957,
-        color:'Blue',
-        drive:function()
+        var h1obj = document.getElementById("title");
+        var picobj = document.getElementById("pic");
+        h1obj.innerHTML = "GOODBYE WORLD!!";
+        h1obj.setAttribute("class","tit");
+        picobj.getAttribute("alt")
+      }
+      function changePicture()
+      {
+        if (picobj.getAttribute("src")=="1.jpg")
         {
-          alert("ZOOM ZOOM")
-        },
-        setColor:function(c)
+          picobj.setAttribute("src","2.jpg");
+        }
+        else
         {
-          this.color=c;
-        },
-        getColor:function()
-        {
-          return this.color;
+          picobj.setAttribute("src","i.jpg");
         }
       }
-      document.write(flat.getColor()+"<br>");
-      flat.setColor('golden');
-      document.write(flat.getColor()+"<br>");
+      window.onload=init;
     </script>
-  </body>
+</head>
+<body>
+    <h1 id="title">HELLO WORLD!!</h1>
+    <img id="pic" src="1.jpg" alt="妇联图片">
+    <button onclick="changePicture()">点我换图</button>
+</body>
 </html>
