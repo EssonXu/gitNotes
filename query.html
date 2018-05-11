@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function init()
+    {
+      var str = "230601198705247969";
+      document.write("身份证号为"+str+"<br>");
+      document.write("身份证号长度为"+str.length+"位<br>");
+      document.write("生日为"+str.substring(6,14)+"<br>");
+      document.write("优化后生日为"+str.substring(6,10)+"年"+str.substring(10,12)+"月"+str.substring(12,14)+"月<br><br>");
+
+      var tel = "051268716929";
+      document.write("电话号码为"+tel+"<br>");
+      document.write("电话号码为"+tel.length+"位<br>");
+      document.write("优化后电话号码为"+tel.substring(0,4)+"-"+tel.substring(4,12)+"<br>");
+      document.write("固定电话所在市区号为"+tel.substring(0,4)+"<br>");
+      document.write("直接读取电话号码为"+tel.substring(4,12)+"<br>");
+    }
+    window.onload=init;
+  </script>
+</body>
+</html>
